@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<img src="gif.GIF" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Conoce Tena</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #f5d742;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            color: #f5d742;
+            background-color: rgba(245, 215, 66, 0.2);
+            transform: translateY(-3px) scale(1.05);
+            text-shadow: 0 0 8px rgba(245, 215, 66, 0.6);
+        }
+
+        nav a:active {
+            transform: translateY(1px);
+            color: #e0b82f;
+        }
+
+        main {
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        h2, h3 {
+            color: #f5d742;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+
+        .image-gallery img {
+            width: 30%;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.3);
+            object-fit: cover;
+            height: 200px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(245, 215, 66, 0.5);
+        }
+
+        .customs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .customs-table th, .customs-table td {
+            border: 1px solid #444;
+            padding: 12px 15px;
+            text-align: left;
+            color: #fff;
+        }
+
+        .customs-table th {
+            background-color: #f5d742;
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .customs-table tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .customs-table tr:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .video-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .video-section video {
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ccc;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-gallery img {
+                width: 90%;
+            }
+            .video-section video {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="fondo_tena.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <header>
+        <h1>Bienvenido a Tena, Corazón de la Amazonía</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Sitio.html">Sitio Geográfico</a>
+        <a href="costumbres.html">Costumbres</a>
+        <a href="galeria.html">Galería</a>
+        <a href="Sitios turisticos.html">sitios Turísticos</a>
+    </nav>
+
+    <main>
+        <h2>Descubre Tena</h2>
+        <p>
+            Tena, capital de la provincia de Napo, es un destino único enclavado en la Amazonía ecuatoriana. Conocido por su biodiversidad, cultura ancestral y su gente cálida, Tena ofrece una mezcla perfecta de aventura, naturaleza y tradición. 
+            Aquí confluyen los ríos Tena y Pano, rodeados de una exuberante vegetación tropical y parques ecológicos ideales para el ecoturismo.
+        </p>
+
+        <p>
+            A través de esta página podrás explorar su geografía, costumbres, sitios emblemáticos y una galería visual que te transportará a uno de los destinos más encantadores del Ecuador.
+        </p>
+
+        <div class="image-gallery">
+            <img src="https://imgv2-1-f.scribdassets.com/img/document/291056092/original/948fd077ac/1?v=1" alt="Río en Tena">
+            <img src="https://www.researchgate.net/publication/380600426/figure/fig1/AS:11431281244017242@1715816952098/Figura-1-Mapa-de-ubicacion-de-la-zona-de-estudio-A-Ubicacion-del-area-de-estudio-en-el.png" alt="Comunidad indígena local">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-g3w_SB3sQ0Ty_eR_OAXQ81OFJQim5KaluJ__HKgX9KyqNwXmxLiqREBWCwsDRHyVAlg&usqp=CAU" alt="Selva amazónica de Tena">
+        </div>
+
+        <div class="zona-geografica">
+            <h2>Zona Geográfica de Puyo</h2>
+            <p><strong>Puyo</strong>, capital de la provincia de <strong>Pastaza</strong>, está situada en la región amazónica del Ecuador, a aproximadamente <strong>950 msnm</strong>.</p>
+            <p>Es un punto estratégico de transición entre la cordillera de los Andes y la llanura amazónica, destacándose por su exuberante selva tropical húmeda.</p>
+            <p>Los ríos <strong>Pastaza</strong>, <strong>Bobonaza</strong> y <strong>Puyo</strong> son vitales para el desarrollo económico, el transporte fluvial y la vida comunitaria.</p>
+            <p>Su clima es <strong>ecuatorial húmedo</strong>, con lluvias frecuentes, temperaturas medias de 23-26°C y alta humedad relativa.</p>
+        </div>
+
+        <!-- Dentro del <main> ya existente, debajo de la zona geográfica -->
+<div class="tabla-info">
+    <h2>Datos demográficos y económicos de Puyo</h2>
+    <table class="customs-table">
+        <tr>
+            <th>Aspecto</th>
+            <th>Dato</th>
+        </tr>
+        <tr>
+            <td><strong>Población total</strong></td>
+            <td>~49,000 habitantes</td>
+        </tr>
+        <tr>
+            <td><strong>Población urbana</strong></td>
+            <td>70%</td>
+        </tr>
+        <tr>
+            <td><strong>Población rural</strong></td>
+            <td>30%</td>
+        </tr>
+        <tr>
+            <td><strong>Turistas anuales</strong></td>
+            <td>Más de 25,000</td>
+        </tr>
+        <tr>
+            <td><strong>Principales actividades económicas</strong></td>
+            <td>Agricultura, ganadería, comercio, turismo y artesanías</td>
+        </tr>
+        <tr>
+            <td><strong>Idiomas predominantes</strong></td>
+            <td>Español, kichwa</td>
+        </tr>
+        <tr>
+            <td><strong>Población indígena</strong></td>
+            <td>~38% de la población</td>
+        </tr>
+    </table>
+</div>
+	

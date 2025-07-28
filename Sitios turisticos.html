@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<img src="gif.GIF" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Conoce Tena</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            line-height: 1.8;
+            font-size: 18px;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #f5d742;
+            text-shadow: 3px 3px 6px #000;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #f5d742;
+        }
+
+        main {
+            padding: 50px 40px;
+            background-color: rgba(0, 0, 0, 0.65);
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #f5d742;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 6px #000;
+        }
+
+        h3 {
+            color: #f5d742;
+            font-size: 2em;
+            margin-top: 40px;
+            text-shadow: 1px 1px 4px #000;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 18px;
+            font-size: 19px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .image-gallery img {
+            width: 30%;
+            border-radius: 12px;
+            margin: 10px;
+            box-shadow: 0 0 12px rgba(255,255,255,0.4);
+            transition: transform 0.3s;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .tourism-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .tourism-table th, .tourism-table td {
+            border: 1px solid #fff;
+            padding: 14px;
+            text-align: center;
+        }
+
+        .tourism-table th {
+            background-color: #f5d742;
+            color: #000;
+            font-size: 19px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ccc;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-gallery img {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div>
+
+
+    <!-- Video de fondo -->
+    <video class="video-background" autoplay muted loop>
+        <source src="fondo_tena.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <header>
+        <h1>Bienvenido a Tena, Corazón de la Amazonía</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Sitio.html">Sitio Geográfico</a>
+        <a href="costumbres.html">Costumbres</a>
+        <a href="galeria.html">Galería</a>
+        <a href="Sitios turisticos.html">Sitios Turísticos</a>
+    </nav>
+
+    <main>
+        <h2>Descubre su Turismo</h2>
+        <p>
+            Puyo, capital de la provincia de Pastaza, es la puerta de entrada a la Amazonía ecuatoriana, 
+            reconocida por su asombrosa biodiversidad, paisajes selváticos y la calidez de su gente. Este destino combina 
+            <strong>aventura, cultura y naturaleza</strong> en cada rincón: desde ríos caudalosos ideales para deportes acuáticos, hasta cascadas escondidas rodeadas de vegetación exuberante.
+        </p>
+        <p>
+            La ciudad ofrece experiencias únicas como paseos por el <strong>Malecón Boayaku Puyo</strong>, visitas a comunidades indígenas Shuar y Kichwa, 
+            además de la oportunidad de practicar rafting en los rápidos del río Puyo o senderismo en reservas naturales cercanas. 
+            Su gastronomía amazónica, basada en productos locales como la yuca, plátano y pescado, complementa una experiencia inolvidable.
+        </p>
+        <p>
+            Visitar Puyo es adentrarse en un mundo de <strong>paisajes vírgenes</strong>, cultura ancestral y actividades ecoturísticas que 
+            hacen de este lugar uno de los destinos más fascinantes del Ecuador.
+        </p>
+
+        <h3>Imágenes Turísticas de Puyo</h3>
+        <div class="image-gallery">
+            <img src="https://www.notiamazonia.com/wp-content/uploads/2023/04/IMG-20230411-WA0006.jpg	" alt="Puente sobre el Río Puyo">
+            <img src="https://pastaza.travel/wp-content/uploads/2017/05/parque_central_portada.jpg" alt="Parque Central de Puyo">
+            <img src="https://guiapuyo.com/wp-content/uploads/2020/11/malecon_boayaku4.jpg" alt="Malecón de Puyo">
+        </div>
+
+        <h3>Zonas Turísticas Destacadas</h3>
+        <table class="tourism-table">
+            <tr>
+   
+             <th>Sitio Turístico</th>
+                <th>Descripción</th>
+                <th>Actividad Recomendada</th>
+            </tr>
+            <tr>
+                <td>Malecón Boayaku Puyo</td>
+                <td>Paseo escénico junto al río con áreas verdes, juegos infantiles y vista a la naturaleza amazónica.</td>
+                <td>Caminatas relajadas y fotografía.</td>
+            </tr>
+            <tr>
+                <td>Comunidad Shuar</td>
+                <td>Grupo indígena amazónico que comparte rituales, danzas y tradiciones ancestrales.</td>
+                <td>Participar en ceremonias culturales.</td>
+            </tr>
+            <tr>
+                <td>Cascada Hola Vida</td>
+                <td>Cascada rodeada de selva virgen, ideal para la observación de flora y fauna.</td>
+                <td>Nadar en sus aguas y realizar senderismo.</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        &copy; 2025 Conoce Tena - Todos los derechos reservados a osako_mt
+    </footer>
+</body>
+</html>

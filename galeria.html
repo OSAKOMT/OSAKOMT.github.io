@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<img src="gif.GIF" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Conoce Tena</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #f5d742;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+            /* Añadido para hacer que la navegación "flote" ligeramente */
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra para efecto 3D */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px; /* Añadido para hacer el área de clic más grande */
+            transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Animación suave */
+            display: inline-block; /* Permite aplicar transformaciones */
+            border-radius: 5px; /* Bordes ligeramente redondeados */
+        }
+
+        nav a:hover {
+            color: #f5d742;
+            background-color: rgba(245, 215, 66, 0.2); /* Fondo sutil al pasar el ratón */
+            transform: translateY(-3px) scale(1.05); /* Ligeramente se eleva y agranda */
+            text-shadow: 0 0 8px rgba(245, 215, 66, 0.6); /* Resplandor al pasar el ratón */
+        }
+        /* Efecto al hacer click (activo) */
+        nav a:active {
+            transform: translateY(1px); /* Ligeramente se "hunde" */
+            color: #e0b82f; /* Un tono más oscuro de amarillo */
+        }
+
+
+        main {
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        h2, h3 {
+            color: #f5d742;
+            margin-bottom: 20px; /* Espacio debajo de los títulos */
+        }
+
+        p {
+            margin-bottom: 15px; /* Espacio debajo de los párrafos */
+            line-height: 1.6; /* Interlineado para mejor legibilidad */
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-bottom: 40px; /* Espacio después de la galería */
+        }
+
+        .image-gallery img {
+            width: 30%;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.3);
+            object-fit: cover; /* Asegura que las imágenes se ajusten bien */
+            height: 200px; /* Altura fija para uniformidad */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el hover de imágenes */
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05); /* Agranda la imagen al pasar el ratón */
+            box-shadow: 0 0 20px rgba(245, 215, 66, 0.5); /* Sombra que evoca el color de Tena */
+        }
+
+        /* Estilos para la tabla */
+        .customs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para la tabla */
+            border-radius: 8px;
+            overflow: hidden; /* Para que el border-radius afecte el contenido */
+            margin-bottom: 40px; /* Espacio después de la tabla */
+        }
+
+        .customs-table th, .customs-table td {
+            border: 1px solid #444; /* Bordes más suaves */
+            padding: 12px 15px;
+            text-align: left;
+            color: #fff;
+        }
+
+        .customs-table th {
+            background-color: #f5d742; /* Color de encabezado que evoca el oro/sol de la Amazonía */
+            color: #333; /* Texto oscuro en el encabezado */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .customs-table tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.5); /* Filas alternas para legibilidad */
+        }
+
+        .customs-table tr:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Efecto hover en filas */
+        }
+
+        .video-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .video-section video {
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ccc;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image-gallery img {
+                width: 90%;
+            }
+            .video-section video {
+                width: 95%; /* Ajuste para pantallas más pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="fondo_tena.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+
+    <header>
+        <h1>Bienvenido a Tena, Corazón de la Amazonía</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Sitio.html">Sitio Geográfico</a>
+        <a href="costumbres.html">Costumbres</a>
+        <a href="galeria.html">Galería</a>
+        <a href="Sitios turisticos.html">Sitios Turísticos</a>
+    </nav>
+
+    <main>
+        <h2>Su galeria</h2>
+        <p>
+            **Tena**, capital de la provincia de Napo, es un destino único enclavado en la Amazonía ecuatoriana. Conocido por su **biodiversidad encontraremos en esta galeria fotos de sus paisajes,danza y gente exomerante para saber mas de esta cuidad
+        </p>
+
+        <p>
+            A través de esta página, te invitamos a sumergirte en la esencia de Tena, explorando su **geografía imponente**, sus **costumbres arraigadas**, los **sitios emblemáticos** que la definen y una **galería visual** que te transportará directamente a uno de los destinos más encantadores y auténticos del Ecuador amazónico.
+        </p>
+
+        <h3>Momentos y Paisajes de Tena</h3>
+        <div class="image-gallery">
+            <img src="https://cloudfront-us-east-1.images.arcpublishing.com/eluniverso/C3VVQSWVWZCMXG6MCYOCQXONQA.jpg" alt="Representación de la cultura local de Tena">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGzAZKJ_6Bs5W4wdjXX3gsAdeotuWirEyb4w&s" alt="Impresionante flora y fauna amazónica">
+            <img src="https://delapatagoniaalmundo.com/wp-content/uploads/2023/01/xPlaza-del-Obrero-en-el-Malecon-de-Puyo.jpg.pagespeed.ic.vDTOP3J6yg.jpg" alt="Actividades de aventura en los ríos de Tena">
+        </div>
+
+        <h3>Costumbres y Tradiciones de Tena</h3>
+        <p>
+            La vida en Tena está profundamente marcada por las **tradiciones de sus pueblos indígenas**, principalmente los Kichwas, quienes han mantenido vivas sus prácticas ancestrales, su lengua y su cosmovisión. Estas costumbres se reflejan en su día a día, en sus celebraciones y en su relación con la naturaleza.
+        </p>
+        <table class="customs-table">
+            <thead>
+                <tr>
+                    <th>Aspecto Cultural</th>
+                    
+                </tr>
+            </thead>
+                <tbody>
+    <tr>
+        <td>
+            <img src="https://ec.viajandox.com/uploads/party_59.jpg" alt="Danza tradicional kichwa" style="width:30%; border-radius:50px;">
+            <p><strong>Música y Danza:</strong> Las comunidades Kichwas celebran con danzas rituales que honran a la naturaleza y los ciclos agrícolas. Se acompañan con tambores, flautas y cantos tradicionales.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://i0.wp.com/www.hayawaska.com/wp-content/uploads/wow-slider-plugin/26/images/artesania_g11.jpg?w=720&ssl=1" alt="Artesanías kichwas" style="width:30%; border-radius:50px;">
+            <p><strong>Artesanía:</strong> Vasijas de arcilla, tejidos de fibra natural y collares con semillas revelan la creatividad simbólica de los pueblos amazónicos. Cada objeto cuenta una historia.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://amazoniaexplorer.com/wp-content/uploads/2022/07/uchumanka-menu-tipico-cocinamos-870x570.jpg" alt="Plato amazónico con maito y chontacuro" style="width:30%; border-radius:50px;">
+            <p><strong>Gastronomía:</strong> El maito de tilapia o carachama y el chontacuro son platos emblemáticos. La chicha de yuca acompaña celebraciones y rituales como bebida sagrada.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://www.paho.org/sites/default/files/styles/max_1300x1300/public/ecu-articulacion-medicina-ancestral-2_0.jpg?itok=5pagpLI7" alt="Shamán amazónico en ritual" style="width:30%; border-radius:50px;">
+            <p><strong>Medicina Tradicional:</strong> Los shamánes o yachaks utilizan plantas medicinales de la selva en rituales de sanación, buscando equilibrio entre cuerpo, espíritu y naturaleza.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="https://imagenes.expreso.ec/files/og_thumbnail/uploads/2023/05/12/645ea5c1cbc29.jpeg" alt="Fiesta de la Chonta" style="width:30%; border-radius:50px;">
+            <p><strong>Festividades:</strong> La Fiesta de la Chonta celebra la cosecha del fruto con danzas, chicha y rituales. También se conmemora el Inti Raymi y festividades religiosas con identidad amazónica.</p>
+        </td>
+    </tr>
+</tbody>
+
+           
+        </table>
+
+        
+    </main>
+
+    <footer>
+        &copy; 2025 Conoce Tena - Todos los derechos reservados a osako_mt
+    </footer>
+
+</body>
+</html>
